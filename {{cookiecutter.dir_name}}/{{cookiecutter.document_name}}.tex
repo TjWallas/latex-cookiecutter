@@ -1,0 +1,88 @@
+{% raw %}
+\documentclass[11pt,twoside]{article}
+
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{latexsym}
+\usepackage{microtype}
+\usepackage{lastpage} 
+\usepackage{hyperref}
+
+\usepackage[dvipsnames*,svgnames]{xcolor}
+\hypersetup{colorlinks=true,allcolors=DarkBlue,linkcolor=black}
+
+%Please include other packages if you need them.
+
+% if you use BibTeX
+%\bibliographystyle{plainurl}
+% please also provide DOI information in your BibTeX entries
+
+%------------------------------------------------------------------------------
+% Please do not modify these values
+\setlength{\textwidth}{12.6cm}
+\setlength{\textheight}{19cm}
+\setlength{\evensidemargin}{1.9cm}
+\setlength{\oddsidemargin}{1.9cm}
+%------------------------------------------------------------------------------
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+%Please define other environments if you need them
+
+\newcommand{\proof}[1]{\par\noindent {\bf Proof:}\ \ \ #1 \hfill$\Box$\hspace{1ex}}
+\newcommand{\sketch}{\par\noindent {\bf Sketch of the proof:} \hspace{1ex}}
+
+%\setcounter{page}{}
+
+%------------------------------------------------------------------------------
+% For headings
+
+\thispagestyle{empty}
+
+\newcommand{\TheAuthor}{}
+\newcommand{\Author}[1]{\renewcommand{\TheAuthor}{#1}}
+
+\newcommand{\TheTitle}{}
+\newcommand{\Title}[1]{\renewcommand{\TheTitle}{#1}}
+
+\Author{Name of the Authors}
+\Title{Title of the Paper}
+
+\fancyfoot{} % clear all footer fields
+
+%------------------------------------------------------------------------------
+
+\begin{document}
+
+\pagenumbering{gobble}
+\vspace{0.2cm}
+
+\begin{center}
+{\Large\bf Title of the paper}
+\end{center}
+
+\begin{center}
+{\large firstname LASTNAME}\\
+Organization\\ 
+Email: {\tt email@example.com}
+\end{center}
+
+\date{}
+
+{\bf Keywords:} $keyword_1$, $keyword_2$ 
+\section{Introduction}                                 
+
+Some text \cite{yu_psi:_2017}
+
+\bibliography{paper}
+\bibliographystyle{unsrt}
+
+\newpage
+
+\hypertarget{lastpage}{}
+\end{document}
+{% endraw %}
