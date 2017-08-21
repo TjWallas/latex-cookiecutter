@@ -9,6 +9,7 @@ SOURCE_TEX = $(FILENAME).tex
 SOURCE_BIB = $(FILENAME).bib
 
 .PHONY: clean rebuild all
+.POSIX:
 
 all: $(TARGET)
 
